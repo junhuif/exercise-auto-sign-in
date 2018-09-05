@@ -2,6 +2,17 @@ var email = "your@example.com";
 var password = "****";
 var enterpoint = "the entry point url";
 
+var casper = require("casper").create({
+  pageSettings: {
+    userAgent:
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X; en-us) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53"
+  },
+  viewportSize: {
+    width: 320,
+    height: 568
+  }
+});
+
 casper.start(enterpoint);
 
 casper.thenEvaluate(function() {
